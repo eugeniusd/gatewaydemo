@@ -22,7 +22,7 @@ docker images
 ```
 and make sure that the image was generated.
 
-##Starting the application
+## Starting the application
 In order to execute the application after the build was successfull run the following command:
 ```bash
 docker run -d -p 8080:8080 -e "SPRING_PROFILES_ACTIVE=httpbin" gatewaydemo
