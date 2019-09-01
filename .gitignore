@@ -1,11 +1,7 @@
 HELP.md
 target/
-.mvn
 !**/src/main/**
 !**/src/test/**
-
-mvnw.cmd
-mvnw
 
 ### STS ###
 .apt_generated
