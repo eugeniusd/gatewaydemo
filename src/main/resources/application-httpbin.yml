@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: httpbin
+          uri: http://httpbin.org
+          predicates:
+            - Method=GET
+            - Path=/httpbin/**
+          filters:
+            - XRequestFilter
+            - RewritePath=/httpbin/(?<segment>.*), /$\{segment}
+

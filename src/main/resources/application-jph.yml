@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: jph
+          uri: https://jsonplaceholder.typicode.com
+          predicates:
+            - Method=GET
+            - Path=/jph/**
+          filters:
+            - RewritePath=/jph/(?<segment>.*), /$\{segment}
+
