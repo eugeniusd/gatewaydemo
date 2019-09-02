@@ -45,3 +45,6 @@ In order to test that the application is correctly routing, check one of the fol
   * _http://localhost:8080/jph/todos_
   * _http://localhost:8080/jph/comments_
   * _http://localhost:8080/jph/todos/1_
+  
+  ## Note
+  The X-Request-ID will not be visible when calling any _httpbin_ route, since HTTPbin is deployed on Heroku which has a proxy that strips and/or replaces certain headers see details [here](https://github.com/postmanlabs/httpbin/issues/454)
